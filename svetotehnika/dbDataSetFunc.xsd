@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbDataSetFunc" targetNamespace="http://tempuri.org/dbDataSetFunc.xsd" xmlns:mstns="http://tempuri.org/dbDataSetFunc.xsd" xmlns="http://tempuri.org/dbDataSetFunc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.svetotehnika.Properties.Settings.GlobalReference.Default.dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cust_comboTableAdapter" GeneratorDataComponentClassName="cust_comboTableAdapter" Name="cust_combo" UserDataComponentName="cust_comboTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbConnectionString (Settings)" DbObjectName="dbo.cust_combo" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT customer_id, nam FROM dbo.cust_combo()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="customer_id" DataSetColumn="customer_id" />
+              <Mapping SourceColumn="nam" DataSetColumn="nam" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tech_comboTableAdapter" GeneratorDataComponentClassName="tech_comboTableAdapter" Name="tech_combo" UserDataComponentName="tech_comboTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbConnectionString (Settings)" DbObjectName="dbo.tech_combo" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT t_i, t_c FROM dbo.tech_combo()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="t_i" DataSetColumn="t_i" />
+              <Mapping SourceColumn="t_c" DataSetColumn="t_c" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="techniqueTableAdapter" GeneratorDataComponentClassName="techniqueTableAdapter" Name="technique" UserDataComponentName="techniqueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbConnectionString (Settings)" DbObjectName="dbo.technique" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[technique] WHERE (([tech_id] = @Original_tech_id) AND ((@IsNull_model = 1 AND [model] IS NULL) OR ([model] = @Original_model)) AND ((@IsNull_category_id = 1 AND [category_id] IS NULL) OR ([category_id] = @Original_category_id)) AND ((@IsNull_issue_date = 1 AND [issue_date] IS NULL) OR ([issue_date] = @Original_issue_date)) AND ((@IsNull_guarantee_period = 1 AND [guarantee_period] IS NULL) OR ([guarantee_period] = @Original_guarantee_period)) AND ((@IsNull_price = 1 AND [price] IS NULL) OR ([price] = @Original_price)) AND ((@IsNull_consignment_id = 1 AND [consignment_id] IS NULL) OR ([consignment_id] = @Original_consignment_id)) AND ((@IsNull_count_stock = 1 AND [count_stock] IS NULL) OR ([count_stock] = @Original_count_stock)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_tech_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="tech_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_model" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="model" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_model" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="model" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_category_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="category_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_category_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="category_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_issue_date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="issue_date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_issue_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="issue_date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_guarantee_period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="guarantee_period" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_guarantee_period" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="guarantee_period" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_consignment_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="consignment_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_consignment_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="consignment_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_count_stock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="count_stock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_count_stock" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="count_stock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[technique] ([tech_id], [model], [category_id], [issue_date], [guarantee_period], [price], [consignment_id], [count_stock], [image]) VALUES (@tech_id, @model, @category_id, @issue_date, @guarantee_period, @price, @consignment_id, @count_stock, @image);
+SELECT tech_id, model, category_id, issue_date, guarantee_period, price, consignment_id, count_stock, image FROM technique WHERE (tech_id = @tech_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@tech_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="tech_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@model" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="model" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@category_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="category_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@issue_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="issue_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@guarantee_period" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="guarantee_period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@consignment_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="consignment_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@count_stock" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="count_stock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@image" Precision="0" ProviderType="VarBinary" Scale="0" Size="0" SourceColumn="image" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT tech_id, model, category_id, issue_date, guarantee_period, price, consignment_id, count_stock, image FROM dbo.technique</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[technique] SET [tech_id] = @tech_id, [model] = @model, [category_id] = @category_id, [issue_date] = @issue_date, [guarantee_period] = @guarantee_period, [price] = @price, [consignment_id] = @consignment_id, [count_stock] = @count_stock, [image] = @image WHERE (([tech_id] = @Original_tech_id) AND ((@IsNull_model = 1 AND [model] IS NULL) OR ([model] = @Original_model)) AND ((@IsNull_category_id = 1 AND [category_id] IS NULL) OR ([category_id] = @Original_category_id)) AND ((@IsNull_issue_date = 1 AND [issue_date] IS NULL) OR ([issue_date] = @Original_issue_date)) AND ((@IsNull_guarantee_period = 1 AND [guarantee_period] IS NULL) OR ([guarantee_period] = @Original_guarantee_period)) AND ((@IsNull_price = 1 AND [price] IS NULL) OR ([price] = @Original_price)) AND ((@IsNull_consignment_id = 1 AND [consignment_id] IS NULL) OR ([consignment_id] = @Original_consignment_id)) AND ((@IsNull_count_stock = 1 AND [count_stock] IS NULL) OR ([count_stock] = @Original_count_stock)));
+SELECT tech_id, model, category_id, issue_date, guarantee_period, price, consignment_id, count_stock, image FROM technique WHERE (tech_id = @tech_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@tech_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="tech_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@model" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="model" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@category_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="category_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@issue_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="issue_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@guarantee_period" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="guarantee_period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@consignment_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="consignment_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@count_stock" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="count_stock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@image" Precision="0" ProviderType="VarBinary" Scale="0" Size="0" SourceColumn="image" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_tech_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="tech_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_model" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="model" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_model" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="model" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_category_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="category_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_category_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="category_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_issue_date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="issue_date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_issue_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="issue_date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_guarantee_period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="guarantee_period" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_guarantee_period" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="guarantee_period" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_price" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_consignment_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="consignment_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_consignment_id" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="consignment_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_count_stock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="count_stock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_count_stock" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="count_stock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="tech_id" DataSetColumn="tech_id" />
+              <Mapping SourceColumn="model" DataSetColumn="model" />
+              <Mapping SourceColumn="category_id" DataSetColumn="category_id" />
+              <Mapping SourceColumn="issue_date" DataSetColumn="issue_date" />
+              <Mapping SourceColumn="guarantee_period" DataSetColumn="guarantee_period" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="consignment_id" DataSetColumn="consignment_id" />
+              <Mapping SourceColumn="count_stock" DataSetColumn="count_stock" />
+              <Mapping SourceColumn="image" DataSetColumn="image" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbDataSetFunc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbDataSetFunc" msprop:Generator_UserDSName="dbDataSetFunc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cust_combo" msprop:Generator_TableClassName="cust_comboDataTable" msprop:Generator_TableVarName="tablecust_combo" msprop:Generator_RowChangedName="cust_comboRowChanged" msprop:Generator_TablePropName="cust_combo" msprop:Generator_RowDeletingName="cust_comboRowDeleting" msprop:Generator_RowChangingName="cust_comboRowChanging" msprop:Generator_RowEvHandlerName="cust_comboRowChangeEventHandler" msprop:Generator_RowDeletedName="cust_comboRowDeleted" msprop:Generator_RowClassName="cust_comboRow" msprop:Generator_UserTableName="cust_combo" msprop:Generator_RowEvArgName="cust_comboRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customer_id" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" msprop:Generator_UserColumnName="customer_id" type="xs:long" />
+              <xs:element name="nam" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnam" msprop:Generator_ColumnPropNameInRow="nam" msprop:Generator_ColumnPropNameInTable="namColumn" msprop:Generator_UserColumnName="nam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="204" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tech_combo" msprop:Generator_TableClassName="tech_comboDataTable" msprop:Generator_TableVarName="tabletech_combo" msprop:Generator_RowChangedName="tech_comboRowChanged" msprop:Generator_TablePropName="tech_combo" msprop:Generator_RowDeletingName="tech_comboRowDeleting" msprop:Generator_RowChangingName="tech_comboRowChanging" msprop:Generator_RowEvHandlerName="tech_comboRowChangeEventHandler" msprop:Generator_RowDeletedName="tech_comboRowDeleted" msprop:Generator_RowClassName="tech_comboRow" msprop:Generator_UserTableName="tech_combo" msprop:Generator_RowEvArgName="tech_comboRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="t_i" msprop:Generator_ColumnVarNameInTable="columnt_i" msprop:Generator_ColumnPropNameInRow="t_i" msprop:Generator_ColumnPropNameInTable="t_iColumn" msprop:Generator_UserColumnName="t_i" type="xs:long" />
+              <xs:element name="t_c" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnt_c" msprop:Generator_ColumnPropNameInRow="t_c" msprop:Generator_ColumnPropNameInTable="t_cColumn" msprop:Generator_UserColumnName="t_c" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="122" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="technique" msprop:Generator_TableClassName="techniqueDataTable" msprop:Generator_TableVarName="tabletechnique" msprop:Generator_TablePropName="technique" msprop:Generator_RowDeletingName="techniqueRowDeleting" msprop:Generator_RowChangingName="techniqueRowChanging" msprop:Generator_RowEvHandlerName="techniqueRowChangeEventHandler" msprop:Generator_RowDeletedName="techniqueRowDeleted" msprop:Generator_UserTableName="technique" msprop:Generator_RowChangedName="techniqueRowChanged" msprop:Generator_RowEvArgName="techniqueRowChangeEvent" msprop:Generator_RowClassName="techniqueRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tech_id" msprop:Generator_ColumnVarNameInTable="columntech_id" msprop:Generator_ColumnPropNameInRow="tech_id" msprop:Generator_ColumnPropNameInTable="tech_idColumn" msprop:Generator_UserColumnName="tech_id" type="xs:long" />
+              <xs:element name="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:Generator_UserColumnName="model" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="category_id" msprop:Generator_ColumnVarNameInTable="columncategory_id" msprop:Generator_ColumnPropNameInRow="category_id" msprop:Generator_ColumnPropNameInTable="category_idColumn" msprop:Generator_UserColumnName="category_id" type="xs:long" minOccurs="0" />
+              <xs:element name="issue_date" msprop:Generator_ColumnVarNameInTable="columnissue_date" msprop:Generator_ColumnPropNameInRow="issue_date" msprop:Generator_ColumnPropNameInTable="issue_dateColumn" msprop:Generator_UserColumnName="issue_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="guarantee_period" msprop:Generator_ColumnVarNameInTable="columnguarantee_period" msprop:Generator_ColumnPropNameInRow="guarantee_period" msprop:Generator_ColumnPropNameInTable="guarantee_periodColumn" msprop:Generator_UserColumnName="guarantee_period" type="xs:long" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="consignment_id" msprop:Generator_ColumnVarNameInTable="columnconsignment_id" msprop:Generator_ColumnPropNameInRow="consignment_id" msprop:Generator_ColumnPropNameInTable="consignment_idColumn" msprop:Generator_UserColumnName="consignment_id" type="xs:long" minOccurs="0" />
+              <xs:element name="count_stock" msprop:Generator_ColumnVarNameInTable="columncount_stock" msprop:Generator_ColumnPropNameInRow="count_stock" msprop:Generator_ColumnPropNameInTable="count_stockColumn" msprop:Generator_UserColumnName="count_stock" type="xs:long" minOccurs="0" />
+              <xs:element name="image" msprop:Generator_ColumnVarNameInTable="columnimage" msprop:Generator_ColumnPropNameInRow="image" msprop:Generator_ColumnPropNameInTable="imageColumn" msprop:Generator_UserColumnName="image" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cust_combo" />
+      <xs:field xpath="mstns:customer_id" />
+    </xs:unique>
+    <xs:unique name="tech_combo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tech_combo" />
+      <xs:field xpath="mstns:t_i" />
+    </xs:unique>
+    <xs:unique name="technique_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:technique" />
+      <xs:field xpath="mstns:tech_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
