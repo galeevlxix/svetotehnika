@@ -4,13 +4,19 @@
 ## 1. Создадим базу данных в SQL Server  
 ### 1. Создадим и определим таблицы, зададим первичные ключи  
   •	Таблица счетов – accounts   
+  ![image](https://github.com/user-attachments/assets/78b8622a-246d-428c-836f-e6066b6cf823)  
   •	Таблица названий категорий техники – category names  
+  ![image](https://github.com/user-attachments/assets/78d808ee-be7a-42be-954d-340f1ad09e33)  
   •	Таблица партий товара – consignments  
+  ![image](https://github.com/user-attachments/assets/6c9e24b0-b938-445e-aa92-ed17fd1dcdbc)  
   •	Таблица покупателей – customers  
+  ![image](https://github.com/user-attachments/assets/b976ba03-5100-4dff-83de-fd1049d48f33)
   •	Таблица поставщиков – purveyors  
+  ![image](https://github.com/user-attachments/assets/4d4b811d-e672-41f0-9a34-d4371be258a7)  
   •	Таблица продаж – sales  
+  ![image](https://github.com/user-attachments/assets/782befc7-ab33-42cc-a6fa-c522cdfa174e)  
   •	Таблица техники – technique  
- 
+ ![image](https://github.com/user-attachments/assets/a2282cac-17b9-4da6-92ad-a45404ef17d5)  
 ### 2. Добавим необходимые связи между таблицами c каскадным изменением зависимых строк в подчиненной таблице при изменении строк в родительской
 •	связь 1:М между подчиненной таблицей accounts и родительской таблицей customers  
 ```sql
@@ -413,7 +419,9 @@ private void printData(List<string[]> d)
                 dataGridView1.Rows.Add(s);
         }
  ```
+![image](https://github.com/user-attachments/assets/74aef907-0bcd-496e-b9df-189531c7d65a)  
 ### 4. Вывод данных (2 вариант: в DataGridView ComboBox)
+![image](https://github.com/user-attachments/assets/5574db27-83a3-40d5-8c39-f5d328bd37f3)  
 Когда нужно поместить данные в Combo Box в DataGridView, мы также инициализируем два списка (диапазона значений): что хотим отображать в Combo Box и значение, закрепленное за этим элементом
 ```c#
         private List<string> purv_id = null;
